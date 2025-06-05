@@ -212,12 +212,7 @@ volumes:
 
 2. Run (detached):
     ```bash
-    docker compose up --build -d
-    ```
-
-3. Tail logs:
-    ```bash
-    docker compose logs -f app
+    npm run docker:compose-up
     ```
 
     Expected:
@@ -231,7 +226,7 @@ volumes:
 #### Tearing Down the Containers
 
 ```bash
-docker compose down -v
+npm run docker:compose-down
 ```
 
 <br>
@@ -332,4 +327,4 @@ if (db.pricingrules.countDocuments({}) === 0) {
 With this setup, you can develop, test, and deploy the checkout system:
 
 - Locally: run MongoDB, seed, and use `npm run dev` or `npm run start`.
-- Docker: `docker compose up --build -d`, then `docker compose logs -f app`.
+- Docker: run `npm run docker:compose-up`.
