@@ -1,0 +1,27 @@
+# Node modules and build output are installed/built inside Docker
+node_modules
+dist
+
+# Git metadata
+.git
+.gitignore
+
+# Coverage reports (if you run Jest or another test runner with coverage)
+coverage
+
+# Local env files
+.env
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE / Editor folders/files
+.vscode/
+.idea/
+
+# Docker files, we don’t need them in the image context
+docker-compose.yml
+run.sh

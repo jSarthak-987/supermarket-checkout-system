@@ -1,0 +1,21 @@
+# Node.js dependencies
+/node_modules/
+package-lock.json
+
+# Compiled output
+/dist/
+# If you’re using a separate build directory for compiled JS/TS
+
+# Environment files
+.env
+
+# Coverage reports (if you run Jest or another test runner with coverage)
+/coverage/
+
+# OS‐generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor folders/files
+.vscode/
+.idea/

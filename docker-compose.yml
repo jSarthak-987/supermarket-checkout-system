@@ -1,0 +1,22 @@
+services:
+  mongo:
+    image: mongo:6
+    container_name: checkout-mongo
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+      - ./seeds/pricing.seed.js:/docker-entrypoint-initdb.d/seed.js:ro
+
+  app:
+    build: .
+    container_name: checkout-app
+    restart: "on-failure"
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+
+volumes:
+  mongo-data:
